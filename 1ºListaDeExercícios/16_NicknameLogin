@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int medirString(const char *texto); 
+
+int main()
+{
+char nome[20], sobrenome[50], completo[75];
+int tamanhoNome = 0;
+
+printf("nome :"); 
+fgets(nome, sizeof nome, stdin);
+printf("sobrenome :"); 
+fgets(sobrenome, sizeof sobrenome, stdin);
+snprintf(completo, sizeof(completo), "%s %s", nome, sobrenome);
+tamanhoNome = medirString(completo) - 3;
+
+printf("sugestão de nome de usuário: %s%d", completo, tamanhoNome);
+
+}
+
+
+int medirString(const char *texto) {
+    int contador = 0;
+
+    // Percorre a memória até achar o caractere nulo '\0'
+    while (texto[contador] != '\0') {
+        contador++;
+    }
+
+    return contador;
+}
