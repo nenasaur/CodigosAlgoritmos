@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+void quantidadeIngredientes(int fatorMultiplicador, int ovo,float  acucar, int trigo);
+
+int main()
+{
+    int ovo, trigo, quantidade_bolo, quantidade_pessoas;
+    float acucar;
+
+    printf("quantas pessoas deseja servir ?");
+    scanf("%d", &quantidade_pessoas);
+    quantidade_bolo = quantidade_pessoas/4;
+    
+    if(quantidade_pessoas%4 !=0 )// caso não seja divisível por 4, arredondaremos pra cima
+    {
+        quantidade_bolo++;
+    }
+    quantidadeIngredientes(quantidade_bolo, ovo, acucar, trigo);
+    
+}
+
+void quantidadeIngredientes(const int fatorMultiplicador,int ovo,float acucar,int trigo)
+    {
+        
+    ovo = 3*fatorMultiplicador;
+    trigo = 2* fatorMultiplicador;
+    acucar= 1.5* fatorMultiplicador;
+    
+    printf("\n");
+    printf(" ---INGREDIENTES PARA OS %d BOLOS--- \n", fatorMultiplicador);
+    printf("%d ovos\n %d trigo\n %.1f acucar", ovo, trigo, acucar);
+    }
