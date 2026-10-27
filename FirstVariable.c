@@ -3,9 +3,9 @@
 int main()
 {
     int Number;
-    printf("Pick a number to be Squared:");
-    scanf("$d", &Number);
+    printf("how old are you? ");
+    scanf("%d", &Number);
     
-    printf("olá turma!");
+    printf("you are %d years old!", Number);
     return 0;
 }
