@@ -1,7 +1,7 @@
 /*
 %d= inteiro;
 %.xf = float onde x é o número de casas  (quando for colocar no scanf só coloque "%f", SENÃO BUGA)
-%.c = char;
+%c = char;
 %s não precisa de endereço ("&")
 
 |--------------------------OBS--------------------------------|
